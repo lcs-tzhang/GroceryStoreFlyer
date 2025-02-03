@@ -9,13 +9,12 @@ import SwiftUI
 
 struct DepartmentsListView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack{
+            List(thisWeeksFlyer.departments){currentDepartment in 
+                Text(currentDepartment.name)
+            }
+            .navigationTitle("Weekly Flyer")
         }
-        .padding()
     }
 }
 
