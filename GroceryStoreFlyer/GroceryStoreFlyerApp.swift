@@ -1,6 +1,6 @@
 //
 //  GroceryStoreFlyerApp.swift
-//  GroceryStoreFlyer
+
 //
 //  Created by xinyu zhang on 2025-02-03.
 //
