@@ -12,10 +12,18 @@ struct DepartmentDetailView: View {
     let departmentToShow: Department
     
     var body: some View {
-        Text(departmentToShow.name)
+        List(departmentToShow.items){currentFoodItem in
+            
+            Text(currentFoodItem.name )
+        }
+        .listStyle(.plain)
+    
+            .navigationTitle(departmentToShow.name)
     }
 }
 
 #Preview {
-    DepartmentDetailView(departmentToShow: thisWeeksFlyer.departments[0])
+    NavigationStack{
+        DepartmentDetailView(departmentToShow: thisWeeksFlyer.departments[0])
+    }
 }
