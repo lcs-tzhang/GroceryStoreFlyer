@@ -9,17 +9,23 @@ import SwiftUI
 
 struct DepartmentsListView: View {
     var body: some View {
-        NavigationStack{
-            List(thisWeeksFlyer.departments){currentDepartment in 
+        NavigationStack {
+            
+            List(thisWeeksFlyer.departments) { currentDepartment in
                 NavigationLink {
                     DepartmentDetailView(departmentToShow: currentDepartment)
                 } label: {
-                    Text(currentDepartment.name)
-                        .font(.headline)
+                    HStack {
+                        Image(systemName: "cart.fill")
+                            .foregroundColor(.blue)
+                        Text(currentDepartment.name)
+                            .font(.headline)
+                    }
+                    .padding(5)
                 }
-
             }
             .navigationTitle("Weekly Flyer")
+            .background(Color(.systemGroupedBackground))
         }
     }
 }

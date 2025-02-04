@@ -19,6 +19,7 @@ struct DepartmentDetailView: View {
                        .scaledToFit()
                        .frame(width: 80, height: 80)
                        .cornerRadius(8)
+                       .shadow(radius: 5)
                    
                    VStack(alignment: .leading) {
                        Text(currentFoodItem.name)
@@ -28,10 +29,15 @@ struct DepartmentDetailView: View {
                            .foregroundColor(.gray)
                    }
                    Spacer()
+                   Button(action: {}) {
+                       Image(systemName: "plus.circle.fill")
+                           .foregroundColor(.green)
+                           .font(.title2)
+                   }
                }
                .padding(.vertical, 5)
            }
-           .listStyle(.plain)
+           .listStyle(.insetGrouped)
            .navigationTitle(departmentToShow.name)
        }
    }
