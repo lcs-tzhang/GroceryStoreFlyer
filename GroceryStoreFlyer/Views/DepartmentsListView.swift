@@ -15,6 +15,7 @@ struct DepartmentsListView: View {
                     DepartmentDetailView(departmentToShow: currentDepartment)
                 } label: {
                     Text(currentDepartment.name)
+                        .font(.headline)
                 }
 
             }
