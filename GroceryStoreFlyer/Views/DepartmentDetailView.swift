@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct DepartmentDetailView: View {
+    
+    let departmentToShow: Department
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(departmentToShow.name)
     }
 }
 
 #Preview {
-    DepartmentDetailView()
+    DepartmentDetailView(departmentToShow: thisWeeksFlyer.departments[0])
 }
