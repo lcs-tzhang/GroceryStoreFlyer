@@ -26,7 +26,10 @@ struct DepartmentDetailView: View {
                            .font(.headline)
                        Text(String(format: "$%.2f", currentFoodItem.price))
                            .font(.subheadline)
-                           .foregroundColor(.gray)
+                           .foregroundColor(.red)
+                       Text(currentFoodItem.weight)
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
                    }
                    Spacer()
                    Button(action: {}) {
@@ -35,7 +38,7 @@ struct DepartmentDetailView: View {
                            .font(.title2)
                    }
                }
-               .padding(.vertical, 5)
+               .padding(.vertical, 8)
            }
            .listStyle(.insetGrouped)
            .navigationTitle(departmentToShow.name)
