@@ -21,15 +21,26 @@ struct DepartmentDetailView: View {
                        .cornerRadius(8)
                        .shadow(radius: 5)
                    
-                   VStack(alignment: .leading) {
-                       Text(currentFoodItem.name)
-                           .font(.headline)
-                       Text(String(format: "$%.2f", currentFoodItem.price))
-                           .font(.subheadline)
-                           .foregroundColor(.red)
-                       Text(currentFoodItem.weight)
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
+                   VStack(alignment: .leading, spacing: 5) {
+                       ZStack {
+                           Text(currentFoodItem.name)
+                               .font(.title2)
+                               .foregroundColor(.blue)
+                               .offset(x: 2, y: 2)
+                           Text(currentFoodItem.name)
+                               .font(.title2)
+                               .foregroundColor(.black)
+                       }
+                       HStack {
+                           Text(String(format: "$%.2f", currentFoodItem.price))
+                               .font(.title3)
+                               .fontWeight(.bold)
+                               .foregroundColor(.red)
+                           Spacer()
+                           Text(currentFoodItem.weight)
+                               .font(.subheadline)
+                               .foregroundColor(.gray)
+                       }
                    }
                    Spacer()
                    Button(action: {}) {
